@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning JS</title>
 </head>
+
 <body>
     <script>
         /*document.writeln(a);
@@ -92,13 +94,68 @@
         // }
 
         //swap
-        let a=10,b=20;
-        b = a + b;
-        a = b - a;
-        b = b - a;
-        document.writeln(a)
-        document.writeln(b) 
+        // let a=10,b=20;
+        // b = a + b;
+        // a = b - a;
+        // b = b - a;
+        // document.writeln(a)
+        // document.writeln(b) 
+
+        //String methods
+        let s1 = "Welcome to Web World";
+        let s2 = "home";
+        //document.writeln(s1.length);
+        // document.writeln(s1.charAt(5)); //on out of index -- nothing
+        //document.writeln(s1.charCodeAt(0));  //on out of index -- NaN
+        //document.writeln(s1.concat(" "+s2+" "+" js.")); //if unknown variable then nothing addedd
+        //document.writeln(s1.endsWith("lc",4)); //second parameter give length of string to be considered. It is case sensitive.
+        //document.writeln(s1.includes("wel",0)); //second parameter give starting position where to start.
+        //document.writeln(s1.indexOf("e",2)); //second parameter give starting position.give -1 when not found.
+        //document.writeln(s1.lastIndexOf("e",4)); //second parameter give starting position and goes backward direction.give -1 when not found.
+        //document.writeln(s1.localeCompare(s2));
+        //document.writeln(s1.match(/we/i));
+        //let result = s1.matchAll(/We/ig);
+        //document.writeln(s1.matchAll(/We/ig));
+        //document.writeln(result); //[object RegExp String Iterator]
+        /*for (let mat of result) {
+            document.writeln("\""+mat[0] + "\" found at index " + mat.index + "<br>");
+        }*/
+        // let s3 = "é";          // single character
+        // let s4 = "e\u0301";    // e + combining accent
+        // document.writeln(s3 === s4);   // false
+        // document.writeln(s3.normalize() === s4.normalize());
+        // document.writeln(s1.padEnd(23,"***")); //first pa - final length, second -- what to padedd,, when we pass length which less than original str then nothing padded.
+        // document.writeln(s1.padStart(23,"***"));
+        //document.writeln(s1.repeat(2)); //parameter - number of copies to append
+        //document.writeln(s1.replace("to","too"));
+        //document.writeln(s1.search(/p/i)); //not found == -1.
+        //document.writeln(s1.slice("we",4)); //give me 4 length str which is start from we, not case sensitive
+        //document.writeln(s1.split(" ",4)); //give me list having length of 4 , splitting  on the bases of " " space.
+        //document.writeln(s1.startsWith("el",3)) // first pa - str search, second pa - where to start
+        //document.writeln(s1.substring(1,5)); //only slice support negative index.
+        //document.writeln(s1.toLocaleLowerCase("tr"));
+        /*
+        Code	Language
+        "en"	English
+        "en-US"	English (US)
+        "en-GB"	English (UK)
+        "tr"	Turkish
+        "az"	Azerbaijani
+        "lt"	Lithuanian
+        "de"	German
+        "el"	Greek
+        "fr"	French
+        "hi"	Hindi
+        "ar"	Arabic
+        "ja"	Japanese
+        "zh"	Chinese
+        */
+        //document.writeln(s1.toLowerCase());
+        document.writeln(s1.trim());
+        document.writeln(s1.trimStart());
+        document.writeln(s1.trimEnd());
 
     </script>
 </body>
+
 </html>
