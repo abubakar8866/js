@@ -151,9 +151,96 @@
         "zh"	Chinese
         */
         //document.writeln(s1.toLowerCase());
-        document.writeln(s1.trim());
-        document.writeln(s1.trimStart());
-        document.writeln(s1.trimEnd());
+        // document.writeln(s1.trim());
+        // document.writeln(s1.trimStart());
+        // document.writeln(s1.trimEnd());
+
+        //object
+        // let person = {
+        //     fname:"Abubakar",
+        //     lname:"khan",
+        //     age:24,
+        //     fullname:function(){
+        //         return this.fname+" "+this.lname;
+        //     }
+        // };
+
+        // delete person.age;
+        // person.eml = "abu@gmail.com";
+        // document.writeln(Object.keys(person));
+        // document.writeln(Object.values(person));
+        // document.writeln(Object.entries(person));
+        // document.writeln(person.fullname());
+        // document.writeln(person["eml"]);
+
+        //constructor
+        // function People(name,age,city,color,ItProgrammingLangCount=1){
+        //     this.name = name,
+        //     this.age = age,
+        //     this.city = city,
+        //     this.color = color,
+        //     this.lang = "english",
+        //     this.ItProgrammingLangCount = ItProgrammingLangCount
+        // };
+
+        // People.prototype.country = "India";
+        // let p1 = new People("abu",24,"Ahmedabad","purple");
+        // p1.eye = "green";
+        // document.writeln(Object.entries(p1));
+        // let p2 = new People("bakar",22,"pune","red");
+        // document.writeln("\n"+Object.entries(p2));
+        // document.writeln(p2.country);
+
+        // let x = 9999999999999999n;
+        // document.writeln(x);
+        // document.writeln(typeof x);
+
+        let birthday = new Date("2001-09-10");
+
+        let today = new Date();
+        //document.writeln(today);
+        //document.writeln(typeof today); //object
+
+        let years = today.getFullYear() - birthday.getFullYear();
+        let months = today.getMonth() - birthday.getMonth();
+        let days = today.getDate() - birthday.getDate();
+        let hours = today.getHours() - birthday.getHours();
+        let minutes = today.getMinutes() - birthday.getMinutes();
+        let seconds = today.getSeconds() - birthday.getSeconds();
+
+        // Adjust if negative
+        if (seconds < 0) {
+            minutes--;
+            seconds += 60;
+        }
+
+        if (minutes < 0) {
+            hours--;
+            minutes += 60;
+        }
+
+        if (hours < 0) {
+            days--;
+            hours += 24;
+        }
+
+        if (days < 0) {
+            months--;
+            let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+            days += lastMonth.getDate();
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        document.writeln("Years: " + years + "<br>");
+        document.writeln("Months: " + months + "<br>");
+        document.writeln("Days: " + days + "<br>");
+        document.writeln("Hours: " + hours + "<br>");
+        document.writeln("Minutes: " + minutes + "<br>");
+        document.writeln("Seconds: " + seconds + "<br>");
 
     </script>
 </body>
