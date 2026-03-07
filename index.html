@@ -195,65 +195,116 @@
         // document.writeln(x);
         // document.writeln(typeof x);
 
-        let birthday = new Date("2001-09-10");
+        // let birthday = new Date("2001-09-10");
 
-        let today = new Date();
-        //document.writeln(today);
-        //document.writeln(typeof today); //object
+        // let today = new Date();
+        // //document.writeln(today);
+        // //document.writeln(typeof today); //object
 
-        let years = today.getFullYear() - birthday.getFullYear();
-        let months = today.getMonth() - birthday.getMonth();
-        let days = today.getDate() - birthday.getDate();
-        let hours = today.getHours() - birthday.getHours();
-        let minutes = today.getMinutes() - birthday.getMinutes();
-        let seconds = today.getSeconds() - birthday.getSeconds();
+        // let years = today.getFullYear() - birthday.getFullYear();
+        // let months = today.getMonth() - birthday.getMonth();
+        // let days = today.getDate() - birthday.getDate();
+        // let hours = today.getHours() - birthday.getHours();
+        // let minutes = today.getMinutes() - birthday.getMinutes();
+        // let seconds = today.getSeconds() - birthday.getSeconds();
 
-        // Adjust if negative
-        if (seconds < 0) {
-            minutes--;
-            seconds += 60;
-        }
+        // // Adjust if negative
+        // if (seconds < 0) {
+        //     minutes--;
+        //     seconds += 60;
+        // }
 
-        if (minutes < 0) {
-            hours--;
-            minutes += 60;
-        }
+        // if (minutes < 0) {
+        //     hours--;
+        //     minutes += 60;
+        // }
 
-        if (hours < 0) {
-            days--;
-            hours += 24;
-        }
+        // if (hours < 0) {
+        //     days--;
+        //     hours += 24;
+        // }
 
-        if (days < 0) {
-            months--;
-            let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-            days += lastMonth.getDate();
-        }
+        // if (days < 0) {
+        //     months--;
+        //     let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        //     days += lastMonth.getDate();
+        // }
 
-        if (months < 0) {
-            years--;
-            months += 12;
-        }
+        // if (months < 0) {
+        //     years--;
+        //     months += 12;
+        // }
 
-        document.writeln("Years: " + years + "<br>");
-        document.writeln("Months: " + months + "<br>");
-        document.writeln("Days: " + days + "<br>");
-        document.writeln("Hours: " + hours + "<br>");
-        document.writeln("Minutes: " + minutes + "<br>");
-        document.writeln("Seconds: " + seconds + "<br>");
+        // document.writeln("Years: " + years + "<br>");
+        // document.writeln("Months: " + months + "<br>");
+        // document.writeln("Days: " + days + "<br>");
+        // document.writeln("Hours: " + hours + "<br>");
+        // document.writeln("Minutes: " + minutes + "<br>");
+        // document.writeln("Seconds: " + seconds + "<br>");
 
-        for (let i = 1; i <= 5; i++) {
-            for(let j=1;j<=i;j++){
-                document.write("*");
-            }
-            document.write("<br>");
-        }
+        // for (let i = 1; i <= 5; i++) {
+        //     for(let j=1;j<=i;j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
 
-        for(let i = 0; i<= 5; i++){
-            for(let j=5;j>=i;j--){
-                document.write("*");
-            }
-            document.write("<br>");
+        // for(let i = 0; i<= 5; i++){
+        //     for(let j=5;j>=i;j--){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        let arr = [10,20,30,40,50,20];
+        let arr2 = [100,10,25,200,35,60];
+        let fruits = ["Mango","Apple","Kiwi","Orange","Banana"];
+        arr[10] = 20;  //first create arr of index+1 size then add
+        arr.push(90); //append
+        arr.pop();   //remove at the end
+        arr.unshift(100); //add ele to the begg
+        arr.shift(); //remove from begg
+        delete arr[0];  //delete element of specific index and undefined will appear
+        // document.writeln(arr.length+"<br>");
+        // document.writeln(arr.concat(arr2)+"<br>");
+        // document.writeln(Object.entries(arr)+"<br>");
+        // document.writeln(arr.indexOf(20)+"<br>");
+        // document.writeln(arr.lastIndexOf(20)+"<br>");
+        // document.writeln(arr.includes(10)+"<br>");
+        //document.writeln(arr.some(myFunc)+"<br>");
+        //document.writeln(arr.every(myFunc)+"<br>");
+        document.writeln(arr+"<br>");
+        // document.writeln(fruits.sort()+"<br>");
+        // document.writeln(fruits.sort().reverse()+"<br>");
+        // document.writeln(arr.sort(function(a,b) {
+        //     return a-b;
+        // })+"<br>");
+        // document.writeln(arr.sort(function(a,b) {
+        //     return b-a;
+        // })+"<br>");
+        // arr.forEach(myFunc);
+        // document.writeln("<br>");
+        // arr.map(myFunc);
+        // document.writeln("<br>");
+        // let even = arr.filter(i=>i%2 === 0);
+        // document.writeln(even+"<br>");
+        // document.writeln(arr.find(n => n>25)+"<br>");
+        //document.writeln(arr.findIndex( n => n<25)+"<br>");
+        //document.writeln(arr.findLastIndex( n => n<25)+"<br>");
+        //document.writeln(arr.slice(2,5)+"<br>");
+        arr.splice(2,0,5,6,7);
+        document.writeln("<br>");
+        //document.writeln(arr+"<br>");
+        document.writeln(arr.join("-"));
+        document.writeln("<br>");
+        document.writeln(arr.reduce(myFunc,100));
+
+        function myFunc(t,v){
+            //return v>35;
+            // if(v > 35){
+            //     document.writeln(v);
+            // }
+            return t+v;
         }
 
     </script>
