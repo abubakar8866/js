@@ -256,15 +256,41 @@
         //     document.write("<br>");
         // }
 
-        let arr = [10,20,30,40,50,20];
-        let arr2 = [100,10,25,200,35,60];
-        let fruits = ["Mango","Apple","Kiwi","Orange","Banana"];
-        arr[10] = 20;  //first create arr of index+1 size then add
-        arr.push(90); //append
-        arr.pop();   //remove at the end
-        arr.unshift(100); //add ele to the begg
-        arr.shift(); //remove from begg
-        delete arr[0];  //delete element of specific index and undefined will appear
+        // let arr = [10,20,30,40,50,20];
+        // let arr2 = [100,10,25,200,35,60];
+        // let fruits = ["Mango","Apple","Kiwi","Orange","Banana"];
+        // for(let x in arr){
+        //     document.writeln(x);
+        // }
+        // document.writeln("<br>")
+        // for(let x in fruits){
+        //     document.writeln(x);
+        // }
+        // document.writeln("<br>")
+        // for(let x of arr){
+        //     document.writeln(x);
+        // }
+        // document.writeln("<br>")
+        // for(let x of fruits){
+        //     document.writeln(x);
+        // }
+        // let person = {
+        //     name:"Abubakar",
+        //     age:12
+        // };
+        // for (const key in person) {
+        //     //document.writeln(key);
+        //     document.writeln(person[key]);
+        // }
+        // for(const i of person){
+        //     document.writeln(i); //Uncaught TypeError: person is not iterable
+        // }
+        // arr[10] = 20;  //first create arr of index+1 size then add
+        // arr.push(90); //append
+        // arr.pop();   //remove at the end
+        // arr.unshift(100); //add ele to the begg
+        // arr.shift(); //remove from begg
+        // delete arr[0];  //delete element of specific index and undefined will appear
         // document.writeln(arr.length+"<br>");
         // document.writeln(arr.concat(arr2)+"<br>");
         // document.writeln(Object.entries(arr)+"<br>");
@@ -273,7 +299,7 @@
         // document.writeln(arr.includes(10)+"<br>");
         //document.writeln(arr.some(myFunc)+"<br>");
         //document.writeln(arr.every(myFunc)+"<br>");
-        document.writeln(arr+"<br>");
+        //document.writeln(arr+"<br>");
         // document.writeln(fruits.sort()+"<br>");
         // document.writeln(fruits.sort().reverse()+"<br>");
         // document.writeln(arr.sort(function(a,b) {
@@ -292,20 +318,72 @@
         //document.writeln(arr.findIndex( n => n<25)+"<br>");
         //document.writeln(arr.findLastIndex( n => n<25)+"<br>");
         //document.writeln(arr.slice(2,5)+"<br>");
-        arr.splice(2,0,5,6,7);
-        document.writeln("<br>");
-        //document.writeln(arr+"<br>");
-        document.writeln(arr.join("-"));
-        document.writeln("<br>");
-        document.writeln(arr.reduce(myFunc,100));
+        // arr.splice(2,0,5,6,7);
+        // document.writeln("<br>");
+        // //document.writeln(arr+"<br>");
+        // document.writeln(arr.join("-"));
+        // document.writeln("<br>");
+        // document.writeln(arr.reduce(myFunc,100));
 
-        function myFunc(t,v){
-            //return v>35;
-            // if(v > 35){
-            //     document.writeln(v);
-            // }
-            return t+v;
+        //function myFunc(t,v){
+        //return v>35;
+        // if(v > 35){
+        //     document.writeln(v);
+        // }
+        //return t+v;
+        //}
+
+        // let s = new Set([10, 20, 30, 40, 50]);
+        // s.add(50); //append
+        // s.delete(10); //delete
+        // //s.clear();        
+        // for (let x of s) {
+        //     document.writeln(x);
+        // }
+        // document.writeln(s.has(20));
+
+        // let m = new Map();
+        // m.set("apple",10);
+        // m.set("banana",100);
+        // m.set("grapes",1000);
+        // document.writeln(m.get("banana"));
+        // document.writeln();
+        // m.delete("grapes");
+        // m.clear();
+        // for (let x of m) {
+        //     document.writeln(x);
+        // }
+
+        // let arr = [
+        //     { name: "apple", quantity: 200 },
+        //     { name: "banana", quantity: 300 },
+        //     { name: "grapes", quantity: 400 },
+        // ];
+
+        // function Check({ quantity }) {
+        //     return quantity > 200 ? "low" : "high";
+        // }
+
+        // let result = Map.groupBy(arr, Check);
+
+        // for (const [key, value] of result) {
+        //     document.writeln("<h3>" + key + "</h3>");
+
+        //     for (let item of value) {
+        //         document.writeln(item.name + " : " + item.quantity + "<br>");
+        //     }
+        // }
+
+        document.writeln("hello");
+        document.writeln("welcome");
+        try {
+            document.wr("done");
+        } catch (error) {
+            document.writeln(error);
+        }finally{
+            document.writeln("finally");
         }
+        document.writeln("program continue");
 
     </script>
 </body>
