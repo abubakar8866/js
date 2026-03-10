@@ -8,7 +8,48 @@
 </head>
 
 <body>
+    <h1 id="try">This is 1</h1>
+    <h1 id="try2">This is 2</h1>
+    <h1 id="try3" class="yu">This is 3</h1>
+    <p id="para"></p>
+    <form action="#" id="myForm">
+        <input type="text" id="name" value="abc">
+        <input type="email" id="email" value="abc@gmail.com">
+        <button onclick="show()" id="btn">Upper</button>
+    </form>
+    <img src="1.jpg" alt="" id="image" width="50%">
+    <button onclick="Click()">Click</button>
     <script>
+        /*let x = document.getElementsByClassName("yu")[0].innerHTML;
+        document.getElementById("para").innerHTML = x;        
+        document.getElementById("para").style.backgroundColor = "red";*/
+        /*let x = document.forms["myForm"];  
+        for(let i=0;i<x.length;i++){
+            document.writeln(x[i].value);
+        }*/
+        function show() {
+            let b = document.getElementById("btn");
+            let x = document.getElementById("name");
+            let y = document.getElementById("email");
+            if (b.innerHTML.includes("Upper")) {
+                b.innerHTML = "Lower";
+                document.getElementById("name").value = x.value.toUpperCase();
+                document.getElementById("email").value = y.value.toUpperCase();
+            } else {
+                b.innerHTML = "Upper";
+                document.getElementById("name").value = x.value.toLowerCase();
+                document.getElementById("email").value = y.value.toLowerCase();
+            }
+
+        }
+        function Click() {
+            let x = document.getElementById("image");
+            if (x.src.includes("1.jpg")) {
+                x.src = "2.jpg";
+            } else {
+                x.src = "1.jpg";
+            }
+        }
         /*document.writeln(a);
         var a = 10;
         var a = 20;
@@ -77,7 +118,7 @@
         //     while(n > 0){
         //         let r = n%10;
         //         ans = ans * 10 + r;
-        //         n = Math.floor(n/10); 
+        //         n = Math.floor(n/10);
         //     }
         //     return ans === on;
         // }
@@ -99,11 +140,11 @@
         // a = b - a;
         // b = b - a;
         // document.writeln(a)
-        // document.writeln(b) 
+        // document.writeln(b)
 
         //String methods
-        let s1 = "Welcome to Web World";
-        let s2 = "home";
+        //let s1 = "Welcome to Web World";
+        //let s2 = "home";
         //document.writeln(s1.length);
         // document.writeln(s1.charAt(5)); //on out of index -- nothing
         //document.writeln(s1.charCodeAt(0));  //on out of index -- NaN
@@ -336,7 +377,7 @@
         // let s = new Set([10, 20, 30, 40, 50]);
         // s.add(50); //append
         // s.delete(10); //delete
-        // //s.clear();        
+        // //s.clear();
         // for (let x of s) {
         //     document.writeln(x);
         // }
@@ -374,7 +415,7 @@
         //     }
         // }
 
-        document.writeln("hello");
+        /*document.writeln("hello");
         document.writeln("welcome");
         try {
             document.wr("done");
@@ -383,7 +424,15 @@
         }finally{
             document.writeln("finally");
         }
-        document.writeln("program continue");
+        document.writeln("program continue");*/
+
+        // document.writeln(Math.floor(4.9));
+        // document.writeln(Math.ceil(4.1));
+        // document.writeln(Math.round(4.5));
+        // document.writeln(Math.trunc(4.9));
+        // document.writeln(Math.floor(Math.random()*9999));
+        // document.writeln(Math.LN2);
+        // document.writeln(Math.LN10);
 
     </script>
 </body>
